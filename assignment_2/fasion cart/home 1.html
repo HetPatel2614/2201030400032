@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fashion Cart - Product Listing</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); 
+      gap: 20px;
+    }
+    
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  margin-right: 600px;
+  
+}
+
+.search-profile {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar {
+  margin-right: 20px;
+}
+
+.profile-option {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+    
+.navigation {
+  background-color: #333;
+  padding: 10px 20px;
+}
+
+.navigation a {
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 20px;
+  transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+  color: #febd69;
+}
+
+.navigation a i {
+  margin-right: 5px;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.menu-list li {
+  margin-right: 20px;
+}
+
+
+    
+    .product {
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+
+    .product-image {
+      width: 100%;
+      padding-bottom: 100%; 
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .product-image img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .product-details {
+      text-align: center;
+    }
+
+    .product-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .product-price {
+      font-size: 1.1rem;
+      color: #007bff;
+      margin-bottom: 10px;
+    }
+
+    .product-action {
+      display: flex;
+      justify-content: center;
+    }
+
+    .buy-button, .add-to-cart {
+      background-color: #007bff;
+      color: #ffffff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-right: 10px;
+    }
+
+    .buy-button:hover, .add-to-cart:hover {
+      background-color: #0056b3;
+    }
+
+    
+.back-button {
+  margin-right: auto;
+  padding: 10px;
+}
+
+.back-button a {
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.back-button a:hover {
+  color: #febd69;
+}
+
+.back-button a i {
+  margin-right: 5px;
+}
+
+
+    
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .footer-logo {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .footer-links {
+      margin-bottom: 20px;
+    }
+
+    .footer-links ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-links li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    .footer-links a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .additional-info {
+      font-size: 0.9rem;
+    }
+
+    .social-media {
+      margin-top: 20px;
+    }
+
+    .social-media a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 1.5rem;
+    }
+    .profile-option a {
+      text-decoration: none;
+      color: #ffffff;
+    }
+    .product-action a {
+      text-decoration: none;
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="back-button">
+      <a href="home page.html" onclick="history.back()"><i class="fas fa-arrow-left"></i> Back</a>
+    </div>
+    <div class="logo">Fashion Cart</div>
+    <div class="search-profile">
+      <div class="search-bar">
+        <input type="text" placeholder="Search">
+        <button><i class="fas fa-search"></i></button>
+      </div>
+      <div class="profile-option">
+        <i class="fas fa-user-circle"></i>
+        <span><a href="login.html">Profile</a></span>
+      </div>
+    
+  </header>
+  <nav class="navigation">
+    <ul class="menu-list">
+      <li><a href="add to cart.html"><i class="fas fa-shopping-cart"></i> Add to Cart</a></li>
+      <li><a href="home page.html"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="about us.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+      <li><a href="services.html"><i class="fas fa-handshake"></i> Services</a></li>
+      <li><a href="contact.html"><i class="fas fa-address-book"></i> Contact Us</a></li>
+    </ul>
+  </nav>
+
+ <div class="container">
+    
+    <div class="product">
+      <div class="product-image">
+        <img src="image11.jpg" alt="Product 13">
+      </div>
+      <div class="product-details">
+        <div class="product-title">Aahwan Women's & Girls' Black Solid Ruched Detail A-line Mini Dress</div>
+        <div class="product-price">$59.99</div>
+        <div class="product-description">
+          The model (height 5'7") is wearing a size S
+          Material: 95% Polyester 5% Polyester, Pattern: Solid
+          Sleeve: Puff Sleeve, Neck: Sweetheart; Fit Type: Regular Fit, Closure:
+        </div>
+        <div class="product-action">
+          <button class="buy-button"><a href="sell page.html">Buy</a></button>
+          <button class="add-to-cart"><a href="add to cart.html">Add to Cart</a></button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="product">
+      <div class="product-image">
+        <img src="image12.jpg" alt="Product 14">
+      </div>
+      <div class="product-details">
+        <div class="product-title">U.S. POLO ASSN. Men Men's Casual Shirts</div>
+        <div class="product-price">$79.99</div>
+        <div class="product-description">
+          Mens shirts
+        </div>
+        <div class="product-action">
+          <button class="buy-button"><a href="sell page.html">Buy</a></button>
+          <button class="add-to-cart"><a href="add to cart.html">Add to Cart</a></button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="product">
+      <div class="product-image">
+        <img src="image13.jpg" alt="Product 15">
+      </div>
+      <div class="product-details">
+        <div class="product-title">ADDYVERO Women's Keyhole Neck Skater Dress5</div>
+        <div class="product-price">$99.99</div>
+        <div class="product-description">
+          Made from soft fabric. Maximum Comfort and Skin Friendly. Highest Quality Stitching.
+        </div>
+        <div class="product-action">
+          <button class="buy-button"><a href="sell page.html">Buy</a></button>
+          <button class="add-to-cart"><a href="add to cart.html">Add to Cart</a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">Fashion Cart</div>
+      <div class="footer-links">
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="about us.html">About Us</a></li>
+          <li><a href="trem and conditions.html">Terms of Service</a></li>
+          <li><a href="trem and conditions.html">Privacy Policy</a></li>
+          <li><a href="about us.html">FAQ</a></li>
+          <li><a href="contact.html">Support</a></li>
+        </ul>
+      </div>
+      <div class="additional-info">
+        <p>123 Fashion Street, City, Country</p>
+        <p>Phone: +1 234 567 890</p>
+        <p>Email: info@fashioncart.com</p>
+      </div>
+      <div class="social-media">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

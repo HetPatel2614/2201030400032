@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fashion Cart - Product Listing</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+
+    
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+    }
+
+    .navigation {
+      background-color: #333;
+      padding: 10px 20px;
+    }
+
+    .navigation a {
+      color: #fff;
+      text-decoration: none;
+      display: inline-block;
+      margin-right: 20px;
+      transition: color 0.3s ease;
+    }
+
+    .navigation a:hover {
+      color: #febd69;
+    }
+
+    .navigation a i {
+      margin-right: 5px;
+    }
+
+    .menu-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+
+    .menu-list li {
+      margin-right: 20px;
+    }
+
+    .search-profile {
+      display: flex;
+      align-items: left;
+    }
+
+    .search-bar {
+      margin-right: 20px;
+    }
+
+    .profile-option {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+    }
+
+    .profile-option i {
+      margin-right: 10px; 
+      font-size: 1.3rem; 
+    }
+
+   
+    .ad-container {
+      background-color: #f5f5f5;
+      border-radius: 20px;
+      width: 1150px;
+      align-content: center;
+      padding: 20px;
+      margin-bottom: 20px;
+      text-align: center;
+      display: grid;
+      grid-template-columns: repeat(0, 1fr); 
+      gap: 20px;
+    }
+
+    .ad-title {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+z
+    .ad-description {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .ad-image {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    .ad-link {
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-size: 1.2rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .ad-link:hover {
+      background-color: #0056b3;
+    }
+
+    
+    .product {
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+
+    .product-image {
+      width: 100%;
+      padding-bottom: 100%; 
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .product-image img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .product-details {
+      text-align: center;
+    }
+
+    .product-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .product-price {
+      font-size: 1.1rem;
+      color: #007bff;
+      margin-bottom: 10px;
+    }
+
+    .product-action {
+      display: flex;
+      justify-content: center;
+    }
+
+    .buy-button,
+    .add-to-cart {
+      background-color: #007bff;
+      color: #ffffff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-right: 10px;
+    }
+
+    .buy-button:hover,
+    .add-to-cart:hover {
+      background-color: #0056b3;
+    }
+     
+     body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); 
+      gap: 20px;
+    }
+
+    
+    .product {
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+
+    .product-image {
+      width: 100%;
+      padding-bottom: 100%; 
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .product-image img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .product-details {
+      text-align: center;
+    }
+
+    .product-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .product-price {
+      font-size: 1.1rem;
+      color: #007bff;
+      margin-bottom: 10px;
+    }
+
+    .product-action {
+      display: flex;
+      justify-content: center;
+    }
+
+    .buy-button, .add-to-cart {
+      background-color: #007bff;
+      color: #ffffff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-right: 10px;
+    }
+
+    .buy-button:hover, .add-to-cart:hover {
+      background-color: #0056b3;
+    }
+
+
+    
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .footer-logo {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .footer-links {
+      margin-bottom: 20px;
+    }
+
+    .footer-links ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-links li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    .footer-links a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .additional-info {
+      font-size: 0.9rem;
+    }
+
+    .social-media {
+      margin-top: 20px;
+    }
+
+    .social-media a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 1.5rem;
+    }
+    .profile-option a {
+      text-decoration: none;
+      color: #ffffff;
+    }
+    .product-action a {
+      text-decoration: none;
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Fashion Cart</div>
+    <div class="search-profile">
+      <div class="search-bar">
+        <input type="text" placeholder="Search">
+        <button><i class="fas fa-search"></i></button>
+      </div>
+      <div class="profile-option">
+        <i class="fas fa-user-circle"></i>
+        <span><a href="login.html">Profile</a></span>
+      </div>
+    </div>
+  </header>
+  <nav class="navigation">
+    <ul class="menu-list">
+      <li><a href="add to cart.html"><i class="fas fa-shopping-cart"></i> Add to Cart</a></li>
+      <li><a href="home page.html"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="about us.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+      <li><a href="services.html"><i class="fas fa-handshake"></i> Services</a></li>
+      <li><a href="contact.html"><i class="fas fa-address-book"></i> Contact Us</a></li>
+    </ul>
+  </nav>
+
+ 
+  <div class="container">
+    <div class="ad-container">
+      <h2 class="ad-title">Special Offer</h2>
+      <p class="ad-description">Limited time offer! Get 50% off on selected items.</p>
+      <img src="Deals-PC-3000-Unrec._CB580048821_.jpg" alt="Special Offer" class="ad-image">
+      <a href="home 1.html" class="ad-link">Shop Now</a>
+    </div>
+  </div>
+
+ <div class="container">
+   
+    <div class="product">
+      <div class="product-image">
+        <img src="image_.jpg" alt="Product 1">
+      </div>
+      <div class="product-details">
+        <div class="product-title">ANNI DESIGNER Women's Cotton Blend Straight Embroidered Kurta with Pant & Dupatta</div>
+        <div class="product-price">$99.99</div>
+        <div class="product-description">
+          Kurta Set Fabric: Cotton Blend || Kurta Set Color :- Navy Blue
+Style: Straight || Length: Calf Length || Sleeves: 3/4 Sleeves ||
+        </div>
+        <div class="product-action">
+          <button class="buy-button"><a href="sell page.html">Buy</a></button>
+          <button class="add-to-cart"><a href="add to cart.html">Add to Cart</a></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product">
+      <div class="product-image">
+        <img src="image1.jpg" alt="Product 2">
+      </div>
+      <div class="product-details">
+        <div class="product-title">Uptownie Lite Stretchable Round Neck Sleeveless Crop Top</div>
+        <div class="product-price">$49.99</div>
+        <div class="product-description">
+          Fit Type: Regular
+          Neck Type: Round Neck
+        </div>
+        <div class="product-action">
+          <button class="buy-button"><a href="sell page.html">Buy</a></button>
+          <button class="add-to-cart"><a href="add to cart.html">Add to Cart</a></button>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="product">
+      <div class="product-image">
+        <img src="image.jpg" alt="Product 3">
+      </div>
+      <div class="product-details">
+        <div class="product-title">madhuram textiles Women Rayon A-Line Long Kurti</div>
+        <div class="product-price">$79.99</div>
+        <div class="product-description">
+          Style : Gown style; Fabric : Rayon; Wash Care : Easy Wash, Gently Wash, Wash seperately
+        </div>
+        <div class="product-action">
+          <button class="buy-button"><a href="sell page.html">Buy</a></button>
+          <button class="add-to-cart"><a href="add to cart.html">Add to Cart</a></button>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="product">
+      <div class="product-image">
+        <img src="image2.jpg" alt="Product 4">
+      </div>
+      <div class="product-details">
+        <div class="product-title">Veirdo® Oversized Baggy Fit Drop Shoulder Half Sleeves Round Neck Solid Pure Cotton T-Shirt Combo for Men (Pack of 2, Available in)</div>
+        <div class="product-price">$129.99</div>
+        <div class="product-description">
+          Pack Contains: 2 Oversized Fit T-Shirts
+          Pattern: Solid
+         </div>
+        <div class="product-action">
+          <button class="buy-button"><a href="sell page.html">Buy</a></button>
+          <button class="add-to-cart"><a href="add to cart.html">Add to Cart</a></button>
+        </div>
+      </div>
+    </div>
+
+    
+    
+    <div class="product">
+      <div class="product-image">
+        <img src="image3.jpg" alt="Product 5">
+      </div>
+      <div class="product-details">
+        <div class="product-title">CHKOKKO Oversized Cotton Front and Back Printed Round Neck T Shirts for Men</div>
+        <div class="product-price">$59.99</div>
+        <div class="product-description">
+          NOTE:-Please follow the size chart given in SECOND IMAGE
+A perfect blend of imported fabric and durability with 60% Cotton and 40% Polyester.
+
+
+        </div>
+        <div class="product-action">
+          <button class="buy-button"><a href="sell page.html">Buy</a></button>
+          <button class="add-to-cart"><a href="add to cart.html">Add to Cart</a></button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="product">
+      <div class="product-image">
+        <img src="image4.jpg" alt="Product 6">
+      </div>
+      <div class="product-details">
+        <div class="product-title">GRECIILOOKS Men Solid Regular Fit Casual Shirt (Pack of 1)</div>
+        <div class="product-price">$39.99</div>
+        <div class="product-description">
+          ackage Includes : Pack of 1 Fancy Stylish Textured Shirts For Men
+Sleeve and Material : Full Sleeve Popcorn Material Men's shirt
+        </div>
+        <div class="product-action">
+          <button class="buy-button"><a href="sell page.html">Buy</a></button>
+          <button class="add-to-cart"><a href="add to cart.html">Add to Cart</a></button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="product">
+      <div class="product-image">
+        <img src="image5.jpg" alt="Product 7">
+      </div>
+      <div class="product-details">
+        <div class="product-title">Kizyoo Casual Shirt for Men Stylish Shirt</div>
+        <div class="product-price">$89.99</div>
+        <div class="product-description">
+          Style - Enhance your look by wearing this Casual Stylish Men's shirt, Team it with a pair of tapered denims Or Solid Chinos and Loafers for a fun Smart Casual look
+Closure Type: Button; Collar Style: Printed
+
+        </div>
+        <div class="product-action">
+          <button class="buy-button"><a href="sell page.html">Buy</a></button>
+          <button class="add-to-cart"><a href="add to cart.html">Add to Cart</a></button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="product">
+      <div class="product-image">
+        <img src="image6.jpg" alt="Product 8">
+      </div>
+      <div class="product-details">
+        <div class="product-title">Lymio Casual Shirt for Men|| Shirt for Men|| Men Stylish Shirt || Men Printed Shirt (Beach Blue,Red,Rama)</div>
+        <div class="product-price">$149.99</div>
+        <div class="product-description">
+          shirt for men || casual shirt for men || men stylish shirt
+
+        </div>
+        <div class="product-action">
+          <button class="buy-button"><a href="sell page.html">Buy</a></button>
+          <button class="add-to-cart"><a href="add to cart.html">Add to Cart</a></button>
+        </div>
+      </div>
+    </div>
+  
+
+   
+    <div class="product">
+      <div class="product-image">
+        <img src="image7.jpg" alt="Product 9">
+      </div>
+      <div class="product-details">
+        <div class="product-title">Lymio Track Pant for Men || Track Pants || Plain Track Pant (Track-06-08)</div>
+        <div class="product-price">$69.99</div>
+        <div class="product-description">
+          Track Pant for Men || Track Pants || Plain Track Pant
+          Style: Casual
+          Fit Type: Regular Fit
+        </div>
+        <div class="product-action">
+          <button class="buy-button"><a href="sell page.html">Buy</a></button>
+          <button class="add-to-cart"><a href="add to cart.html">Add to Cart</a></button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="product">
+      <div class="product-image">
+        <img src="image8.jpg" alt="Product 10">
+      </div>
+      <div class="product-details">
+        <div class="product-title">White Button New south Indian traditional pattu pavadai Jecquard Lehenga choli for girls dress</div>
+        <div class="product-price">$119.99</div>
+        <div class="product-description">
+          t’s Ready to Wear Girls Party Wear Girls pattu pavadai jacquard silk Lehenga Choli.
+        </div>
+        <div class="product-action">
+          <button class="buy-button"><a href="sell page.html">Buy</a></button>
+          <button class="add-to-cart"><a href="add to cart.html">Add to Cart</a></button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="product">
+      <div class="product-image">
+        <img src="image9.jpg" alt="Product 11">
+      </div>
+      <div class="product-details">
+        <div class="product-title">T2F Girls Casual Dress1</div>
+        <div class="product-price">$79.99</div>
+        <div class="product-description">
+          100% Cotton
+          Do not iron on the prints
+          Perfect for every occasion, Comes in attractive colors and designs.
+        </div>
+        <div class="product-action">
+          <button class="buy-button"><a href="sell page.html">Buy</a></button>
+          <button class="add-to-cart"><a href="add to cart.html">Add to Cart</a></button>
+        </div>
+      </div>
+    </div>
+   
+    <div class="product">
+      <div class="product-image">
+        <img src="image10.jpg" alt="Product 12">
+      </div>
+      <div class="product-details">
+        <div class="product-title">KYDA KIDS® 100% Girls Cotton Printed Track Pants (Pack o 3)</div>
+        <div class="product-price">$99.99</div>
+        <div class="product-description">
+          100% COTTON - The track pants are made from 100% genuine cotton with the latest industry standards in the country
+        </div>
+        <div class="product-action">
+          <button class="buy-button"><a href="sell page.html">Buy</a></button>
+          <button class="add-to-cart"><a href="add to cart.html">Add to Cart</a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">Fashion Cart</div>
+      <div class="footer-links">
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="about us.html">About Us</a></li>
+          <li><a href="trem and conditions.html">Terms of Service</a></li>
+          <li><a href="trem and conditions.html">Privacy Policy</a></li>
+          <li><a href="about us.html">FAQ</a></li>
+          <li><a href="contact.html">Support</a></li>
+        </ul>
+      </div>
+      <div class="additional-info">
+        <p>123 Fashion Street, City, Country</p>
+        <p>Phone: +1 234 567 890</p>
+        <p>Email: info@fashioncart.com</p>
+      </div>
+      <div class="social-media">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

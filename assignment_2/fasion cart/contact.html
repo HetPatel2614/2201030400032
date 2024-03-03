@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fashion Cart</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 0 20px;
+      text-align: center; 
+    }
+
+    
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      margin-right: auto;
+    }
+
+    .navigation {
+      display: flex;
+    }
+
+    .navigation a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+      display: flex;
+      align-items: center;
+    }
+
+    .navigation a i {
+      margin-right: 5px;
+    }
+
+    .menu-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+
+    .menu-list li {
+      margin-right: 20px;
+    }
+
+    .contact-box {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-top: 20px;
+      text-align: left; 
+      position: relative; 
+    }
+
+    .contact-box::before {
+      content: "";
+      position: absolute;
+      top: -15px; 
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-bottom: 15px solid #fff; 
+    }
+
+    .contact-box::after {
+      content: "";
+      position: absolute;
+      bottom: -15px; 
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-top: 15px solid #fff; 
+    }
+
+    .contact-box h2 {
+      margin-bottom: 20px;
+      color: #333; 
+    }
+
+    .contact-box p {
+      color: #555; 
+    }
+
+    .contact-box form {
+      text-align: left;
+    }
+
+    .contact-box label {
+      display: block;
+      margin-bottom: 10px;
+      color: #333; 
+    }
+
+    .contact-box input,
+    .contact-box textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    .contact-box textarea {
+      resize: none; 
+    }
+
+    .contact-box button {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .centered-name {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .social-media {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .social-media a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 1.5rem;
+    }
+
+    .footer-links {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .footer-links a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Fashion Cart</div>
+    <nav class="navigation">
+      <ul class="menu-list">
+        <li><a href="add to cart.html"><i class="fas fa-shopping-cart"></i> Add to Cart</a></li>
+        <li><a href="home page.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="about us.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+        <li><a href="services.html"><i class="fas fa-handshake"></i> Services</a></li>
+        <li><a href="contact.html"><i class="fas fa-address-book"></i> Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="container">
+    
+    <div class="contact-box">
+      <h2>Contact Us</h2>
+      <p>Feel free to reach out to us for any inquiries or assistance.</p>
+      <form action="home page.html" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" required></textarea><br><br>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <div class="centered-name">Fashion Cart</div>
+    <div class="social-media">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+    <div class="footer-links">
+      <a href="trem and conditions.html">Terms of Service</a>
+      <span>|</span>
+      <a href="trem and conditions.html">Privacy Policy</a>
+      <span>|</span>
+      <a href="contact.html">FAQ</a>
+    </div>
+  </footer>
+</body>
+</html>
